@@ -1,0 +1,227 @@
+$font-color: antiquewhite;
+$background-color: antiquewhite;
+$border-color: black;
+$hover-color: gray;
+$breakpoint-small-phone: 375px;
+$breakpoint-phone: 425px;
+$breakpoint-tablet: 777px;
+$breakpoint-laptop: 1024px;
+$breakpoint-large-laptop: 1440px;
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $background-color;
+    font-family: 'Poiret One', cursive;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+header {
+    margin: 10px;
+    font-family: 'Abril Fatface', cursive;
+    font-size: 50px;
+}
+
+.nav-bar {
+
+    ul {
+        background-color: $border-color;
+        color: $font-color;
+        text-align: left;
+        margin: 0px;
+        list-style-type: none;
+        display: grid;
+    
+    }
+
+    a {
+        color: $font-color;
+        text-decoration: none;
+        font-family: 'Poiret One', cursive;
+        font-size: 30px;
+    }
+    
+    a:hover {
+        color: $hover-color;
+    }
+}
+
+.layout {
+
+    article {
+        padding: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 50px;  
+    }
+    h3 {
+        font-family: 'Sacramento', cursive;
+        font-size: 30px; 
+    }
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        
+    }
+    img {
+        border: solid $border-color 2px;
+    }
+    
+}
+
+.embeded {
+
+    iframe {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        grid-template-columns: 1fr;
+        grid-gap: 100px;
+    }
+    
+    embed {
+        width: 100%;
+        margin: 0 auto;
+    }
+}
+
+footer {
+    background-color: $border-color;
+    color: $font-color;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: "footer";
+}
+
+@media (min-width: $breakpoint-small-phone) {
+    header {
+        font-size: 60px;
+    }
+
+    .layout {
+        padding-left: 30px;
+    }
+
+    .embeded {
+        padding-left: 30px;
+    }
+
+}
+
+@media (min-width: $breakpoint-phone) {
+
+    .nav-bar {
+        text-align: center;
+    }
+
+    header {
+        font-size: 65px;
+    }
+
+    article {
+        margin: 5px;
+        padding-left: 10px;
+        display: grid; 
+        grid-template-columns: 1fr;
+        column-gap: 50px;
+        
+    }
+
+    iframe {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        grid-template-columns: 1fr;
+        grid-gap: 100px;
+    }
+}
+
+@media (min-width: $breakpoint-tablet) {
+
+
+    ul {
+        text-align: center;
+        margin: 500px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    a {
+        text-align: center;
+        margin: 10px;
+
+    }
+    
+    header {
+        font-size: 100px;
+    }
+
+    article {
+        margin: 10px;
+        padding-left: 10px;
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 50px;
+        
+    }
+
+    iframe, embed {
+        text-align: center;
+        margin-bottom: 50px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 100px;
+    }
+}
+
+@media (min-width: $breakpoint-laptop) {
+
+    p {
+        display: grid;
+        grid-template-columns: 12em;
+    }
+
+    article {
+        margin: 50px;
+        padding-left: 50px;
+        display: grid; 
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 50px;
+        
+    }
+}
+
+@media (min-width: $breakpoint-large-laptop) {
+
+    header {
+        font-size: 200px;
+    }
+
+    article {
+        margin: 50px;
+        padding: 50px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 50px;  
+    }
+    h3 {
+        font-family: 'Sacramento', cursive;
+        font-size: 50px;
+    }
+    p {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: left;
+        font-size: 20px;
+    }
+    
+}
+
