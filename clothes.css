@@ -1,40 +1,50 @@
 html {
   font-size: 100%;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  background-color: antiquewhite;
-  font-family: 'Poiret One', cursive;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right bottom,
+    from(#c7c7c7),
+    to(white)
+  );
+  background: linear-gradient(to bottom right, #c7c7c7, white);
+  font-family: "Poiret One", cursive;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   -ms-grid-rows: 1fr;
-      grid-template-rows: 1fr;
+  grid-template-rows: 1fr;
 }
 
 header {
-  margin: 10px;
-  font-family: 'Abril Fatface', cursive;
+  background-image: url(https://cdn.pixabay.com/photo/2017/08/06/22/52/blouse-2597205_960_720.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: -10px;
+  font-family: "Abril Fatface", cursive;
   font-size: 50px;
 }
 
 .nav-bar ul {
-  background-color: black;
+  background: black;
   color: antiquewhite;
   text-align: left;
-  margin: 0px;
+  margin: -10px;
   list-style-type: none;
-  display: -ms-grid;
-  display: grid;
 }
 
 .nav-bar a {
   color: antiquewhite;
   text-decoration: none;
-  font-family: 'Poiret One', cursive;
+  font-family: "Poiret One", cursive;
   font-size: 30px;
 }
 
@@ -47,14 +57,37 @@ header {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   -webkit-column-gap: 50px;
-          column-gap: 50px;
+  column-gap: 50px;
 }
 
 .layout h3 {
-  font-family: 'Sacramento', cursive;
+  font-family: "Sacramento", cursive;
   font-size: 30px;
+}
+
+.layout .myButton {
+  background-color: #ffffff;
+  border: 1px solid #dcdcdc;
+  display: -ms-inline-grid;
+  display: inline-grid;
+  cursor: pointer;
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  padding: 6px 24px;
+  text-decoration: none;
+}
+
+.layout .myButton:hover {
+  background-color: #f6f6f6;
+  color: gray;
+}
+
+.layout .myButton:active {
+  position: relative;
+  top: 1px;
 }
 
 .layout p {
@@ -64,6 +97,8 @@ header {
 
 .layout img {
   border: solid black 2px;
+  width: 100%;
+  height: auto;
 }
 
 .embeded iframe {
@@ -71,7 +106,7 @@ header {
   margin: 0 auto;
   margin-bottom: 50px;
   -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  grid-template-columns: 1fr;
   grid-gap: 100px;
 }
 
@@ -81,16 +116,26 @@ header {
 }
 
 footer {
-  background-color: black;
+  background: black;
   color: antiquewhite;
+  font-size: 12px;
   position: fixed;
   left: 0;
   bottom: 0;
   width: 100%;
   padding: 10px;
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "footer";
+}
+
+footer p {
+  margin: 5px;
+}
+
+footer a {
+  color: antiquewhite;
+}
+
+footer a:hover {
+  color: gray;
 }
 
 @media (min-width: 375px) {
@@ -118,28 +163,32 @@ footer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     -webkit-column-gap: 50px;
-            column-gap: 50px;
+    column-gap: 50px;
   }
   iframe {
     text-align: center;
     margin: 0 auto;
     margin-bottom: 50px;
     -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 100px;
+  }
+  footer {
+    font-size: 13px;
+    padding: 13px;
   }
 }
 
-@media (min-width: 777px) {
+@media (min-width: 768px) {
   ul {
     text-align: center;
     margin: 500px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr) [4];
+    grid-template-columns: repeat(4, 1fr);
   }
   a {
     text-align: center;
@@ -153,19 +202,28 @@ footer {
     padding-left: 10px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr) [3];
+    grid-template-columns: repeat(3, 1fr);
     -webkit-column-gap: 50px;
-            column-gap: 50px;
+    column-gap: 50px;
   }
-  iframe, embed {
+  iframe,
+  embed {
     text-align: center;
     margin-bottom: 50px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: (1fr) [4];
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 100px;
+  }
+  footer {
+    font-size: 20px;
+    padding: 20px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr) [2];
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -174,17 +232,23 @@ footer {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 12em;
-        grid-template-columns: 12em;
+    grid-template-columns: 12em;
   }
   article {
     margin: 50px;
     padding-left: 50px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr) [3];
+    grid-template-columns: repeat(3, 1fr);
     -webkit-column-gap: 50px;
-            column-gap: 50px;
+    column-gap: 50px;
+  }
+  footer p {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr) [3];
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -197,19 +261,22 @@ footer {
     padding: 50px;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[3];
-        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-columns: (1fr) [3];
+    grid-template-columns: repeat(3, 1fr);
     -webkit-column-gap: 50px;
-            column-gap: 50px;
+    column-gap: 50px;
   }
   h3 {
-    font-family: 'Sacramento', cursive;
+    font-family: "Sacramento", cursive;
     font-size: 50px;
   }
   p {
     font-family: Arial, Helvetica, sans-serif;
     text-align: left;
     font-size: 20px;
+  }
+  footer p {
+    font-family: "Poiret One", cursive;
   }
 }
 /*# sourceMappingURL=clothes.css.map */
